@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: first
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: first
+  template:
+    metadata:
+      labels:
+        app: first
+    spec:
+      containers:
+      - image: node
+        name: first
+        ports:
+        - containerPort: 80
