@@ -14,7 +14,7 @@ spec:
         app: first
     spec:
       containers:
-      - image: edsonbryan/argocd:latest
+      - image: edsonbryan/argocd:8081
         name: first
         ports:
         - containerPort: 8081
