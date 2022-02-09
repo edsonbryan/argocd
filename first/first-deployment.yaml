@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: first
 spec:
-  replicas: 2
+  replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
         app: first
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: edsonbryan/argocd:latest
         name: first
         ports:
-        - containerPort: 80
+        - containerPort: 8081
